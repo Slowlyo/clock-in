@@ -70,5 +70,5 @@ func execCommand(command string) {
 // windows build command
 // go build -ldflags "-H windowsgui" -o clockIn.exe main.go
 
-// linux build command
-// go build -o clockIn main.go
+// linux build command in Windows cmd : ubuntu x86_64
+// set GOARCH=amd64 set GOOS=linux go build -o clockIn main.go
