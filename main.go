@@ -59,7 +59,9 @@ func gitHandler() {
 
 func execCommand(command string) {
 	// windows
-	cmd := exec.Command("cmd", "/C", command)
+	//cmd := exec.Command("cmd", "/C", command)
+	// linux
+	cmd := exec.Command("/bin/bash", "-c", command)
 
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stderr
