@@ -58,6 +58,7 @@ func gitHandler() {
 }
 
 func execCommand(command string) {
+	// windows
 	cmd := exec.Command("cmd", "/C", command)
 
 	cmd.Stdout = os.Stdout
@@ -65,3 +66,9 @@ func execCommand(command string) {
 	cmd.Dir = "./"
 	cmd.Run()
 }
+
+// windows build command
+// go build -ldflags "-H windowsgui" -o clockIn.exe main.go
+
+// linux build command
+// go build -o clockIn main.go
